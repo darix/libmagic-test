@@ -6,6 +6,10 @@ I really wonder if this is a valid use case, but atm it fails with:
 Error in magic_buffer(): no magic files loaded
 ```
 
+We call ```magic_open``` with ```MAGIC_NO_CHECK_SOFT``` which according
+to the man page means ```Don't consult magic files.```. Why does the
+library insist on loading magic files in this case?
+
 A potential fix is this patch from the charlock_holmes project:
 
 ```
