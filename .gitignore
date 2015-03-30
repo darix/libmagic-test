@@ -30,3 +30,5 @@
 
 # Debug files
 *.dSYM/
+
+no-magic-file-test
